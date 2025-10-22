@@ -24,3 +24,24 @@ It showcases my projects, skills, and contact information dynamically.
 ```bash
 git clone https://github.com/MRPeops01/Portfolio-website.git
 
+
+###2. Navigate to the project folder
+
+###3. Create a virtual environment (recommended)
+
+###4 Activate the virtual environment
+
+Windows:
+
+venv\Scripts\activate
+
+
+Mac/Linux:
+
+source venv/bin/activate
+
+###5. Run the Flask app
+python app.py you will need Flask
+
+
+
