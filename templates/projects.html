@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='projects.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>My Projects</h1>
+    </header>
+
+
+    <main>
+        <h2>Projects I've Worked On</h2>
+        <p>Since you know a little bit about me let me show you a list of projects i've created so far.</p>
+        <ul>
+            {% for project in projects %}
+            <li>{{ project }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        <a class="links" href="{{ url_for('about_me') }}">About Me</a>
+        <a class="links" href="{{ url_for('home') }}">Home</a>
+        <img class="links" src="{{ url_for('static', filename='assets/banner.png') }}" alt="Banner">
+    </footer>
+</body>
+
+</html>

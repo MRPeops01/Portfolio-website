@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+venv/
+env/
+
+# Flask / web
+instance/
+*.sqlite3
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# PyInstaller / build folders
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Optional: node / npm if you ever add JS packages
+node_modules/
