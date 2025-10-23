@@ -27,6 +27,21 @@ def projects():
     ]
     return render_template('projects.html', projects=projects)
 
+@app.route('/blog')
+def weekly_blog():
+    blog_topics = [
+        "Road to Web Development",
+        "Jinja2 Mastery",
+        "Getting ready for Django",
+    ]
+
+    blog_title = blog_topics[0]
+
+    return render_template('blog.html', blog_title=blog_title)
+    
+
+
+
 
 
 

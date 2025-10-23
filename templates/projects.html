@@ -4,30 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='projects.css') }}">
 </head>
 
 <body>
     <header>
         <h1>My Projects</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a> |
+            <a href="{{ url_for('about_me') }}">About Me</a> |
+            <a href="{{ url_for('weekly_blog') }}">Weekly Blog</a>
+        </nav>
     </header>
-
 
     <main>
         <h2>Projects I've Worked On</h2>
-        <p>Since you know a little bit about me let me show you a list of projects i've created so far.</p>
+        <p>Since you know a little bit about me, here’s a list of projects I've created so far:</p>
+
         <ul>
             {% for project in projects %}
-            <li>{{ project }}</li>
+            {% set parts = project.split("link:") %}
+            <li>
+                {{ parts[0].strip() }}
+                {% if parts|length > 1 %}
+                <a href="{{ parts[1].strip() }}" target="_blank">Link</a>
+                {% endif %}
+            </li>
             {% endfor %}
         </ul>
     </main>
 
     <footer>
-        <a class="links" href="{{ url_for('about_me') }}">About Me</a>
-        <a class="links" href="{{ url_for('home') }}">Home</a>
-        <img class="links" src="{{ url_for('static', filename='assets/banner.png') }}" alt="Banner">
+        <p>Check out my weekly blog and learn more about me!</p>
+        <a href="{{ url_for('weekly_blog') }}">Weekly Blog</a> |
+        <a href="{{ url_for('about_me') }}">About Me</a> |
+        <a href="{{ url_for('home') }}">Home</a>
+        <br>
+        <img src="{{ url_for('static', filename='assets/banner.png') }}" alt="Banner" style="margin-top:10px;">
     </footer>
 </body>
 
