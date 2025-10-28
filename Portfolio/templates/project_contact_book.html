@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="main main--project">
+    <div>
+        <img class="hero" src="{{ url_for('static', filename=project['hero']) }}"
+            alt="A hand holding a pen, about to write something in a project planner." />
+
+        <article class="project">
+            <article class="project__content">
+                <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                <p>
+                    The Contact Book App is a simple yet powerful desktop application built using Python and Tkinter. It
+                    allows users to easily store, view, and manage their personal or professional contacts in one place.
+                </p>
+                <p>
+                    Users can add new contacts by entering a name and phone number, view all saved contacts in a clean
+                    list interface, and delete unwanted entries with a single click. All information is securely stored
+                    in a local SQLite database for persistent access.
+                </p>
+                <p>
+                    This project is developed using Python's Tkinter library for the graphical interface and SQLite for
+                    database management. The combination provides a lightweight, fast, and user-friendly experience.
+                </p>
+                <p>
+                    The most challenging part of building this project was setting up the database integration with
+                    Tkinter’s event-driven interface to ensure real-time updates and persistent data storage.
+                </p>
+            </article>
+
+            <section>
+                <article class="project__meta-group">
+                    <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                    <ul class="technology-list">
+                        <li class="technology-list__item">Python</li>
+                    </ul>
+                </article>
+
+                <a class="cta" href="{{ project['prod'] }}">
+                    <img class="cta__icon" src="{{ url_for('static', filename='img/pointer.svg') }}">
+                    View in production
+                </a>
+            </section>
+        </article>
+    </div>
+</main>
+{% endblock %}
