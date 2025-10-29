@@ -8,7 +8,7 @@ projects = [
         "hero": "img/habit-tracking-hero.png",
         "categories": ["python", "web"],
         "slug": "habit-tracking",
-        "prod": "https://github.com/MRPeops01/Habit-Tracker",
+        "prod": "https://habit-tracker-hjzp.onrender.com/",
     },
     {
         "name": "Microblog Project with Flask",
@@ -16,7 +16,7 @@ projects = [
         "hero": "img/microblog.jpg",
         "categories": ["Flask", "Python"],
         "slug": "microblog",
-        "prod":"https://github.com/MRPeops01/Python-Web-Microblog"
+        "prod":"https://python-web-microblog-g35l.onrender.com/"
     },
     {
         "name": "Contact Book with python tkinter",
